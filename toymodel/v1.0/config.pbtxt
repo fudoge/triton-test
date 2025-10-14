@@ -1,0 +1,31 @@
+name: "smiles_transformer_regression"
+platform: "pytorch_libtorch"
+max_batch_size: 8
+
+input [
+  {
+    name: "input__0"
+    data_type: TYPE_FP32
+    dims: [50, 101]
+  }
+]
+
+output [
+  {
+    name: "output__0"
+    data_type: TYPE_FP32
+    dims: [1]
+  }
+]
+
+instance_group [
+  {
+    count: 1
+    kind: KIND_CPU
+  }
+]
+
+dynamic_batching {
+  preferred_batch_size: [1, 2, 4, 8]
+  max_queue_delay_microseconds: 100
+}
