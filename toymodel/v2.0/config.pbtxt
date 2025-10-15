@@ -1,0 +1,36 @@
+name: "dta_model"
+platform: "pytorch_libtorch"
+max_batch_size: 16
+
+input [
+  {
+    name: "input__0"
+    data_type: TYPE_FP32
+    dims: [256, 101]
+  },
+  {
+    name: "input__1"
+    data_type: TYPE_FP32
+    dims: [1000, 25]
+  }
+]
+
+output [
+  {
+    name: "output__0"
+    data_type: TYPE_FP32
+    dims: [1]
+  }
+]
+
+instance_group [
+  {
+    count: 1
+    kind: KIND_CPU
+  }
+]
+
+dynamic_batching {
+  preferred_batch_size: [4, 8, 16]
+  max_queue_delay_microseconds: 100
+}
