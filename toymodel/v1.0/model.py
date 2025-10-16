@@ -127,15 +127,6 @@ class SMILESTransformerRegression(nn.Module):
 
 
 def create_toy_model(vocab_size=101):
-    """
-    Triton 테스트용 간단한 모델 생성
-    
-    Args:
-        vocab_size: vocab 크기 (default: 101)
-    
-    Returns:
-        model: SMILESTransformerRegression 모델
-    """
     model = SMILESTransformerRegression(
         vocab_size=vocab_size,
         d_model=128,
