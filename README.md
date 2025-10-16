@@ -5,13 +5,13 @@
 ## 폴더 구조 관례
 모델 및 `config.pbtxt`는 `/artifacts`아래와 같이 정리해주세요:
 ```bash
-.
-├── dta_model
-│   ├── v1.0
+artifacts/
+├── dta_model/
+│   ├── v1.0/
 │   │   └── model.pt
 │   └── config.pbtxt
-└── toymodel
-    ├── v1.0
+└── toymodel/
+    ├── v1.0/
     │   └── model.pt
     └── config.pbtxt
 ```
