@@ -3,7 +3,7 @@
 [Triton Inference Server](https://github.com/triton-inference-server/server)를 테스트하기 위한 임시 레포지토리 입니다.
 
 ## 폴더 구조 관례
-모델 및 `config.pbtxt`는 아래와 같이 정리해주세요:
+모델 및 `config.pbtxt`는 `/artifacts`아래와 같이 정리해주세요:
 ```bash
 .
 ├── dta_model
@@ -17,7 +17,7 @@
 ```
 
 
-나머지 관련 파일들은 `모델명_workspace`로 분리해놔주세요
+나머지 관련 파일들은 `workspaces/모델명`으로 분리해놔주세요
 
 ## toymodel
 ```
