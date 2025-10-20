@@ -46,3 +46,21 @@ Architecture:
 3. Concat [Drug Feature, Protein Feature]
 4. 3-Layer MLP -> Regression Output
 ```
+
+## multi-label model
+
+```
+SMILES and FASTA sequence based Multi-Output DTA Model
+
+입력: 
+1. SMILES string (one-hot encoded) [batch_size, smiles_seq_len, smiles_vocab_size]
+2. FASTA sequence (one-hot encoded) [batch_size, fasta_seq_len, fasta_vocab_size]
+
+출력: 2 Regression values [batch_size, 2]
+
+Architecture:
+1. SMILES -> Transformer Encoder -> Drug Feature Vector
+2. FASTA   -> Transformer Encoder -> Protein Feature Vector
+3. Concat [Drug Feature, Protein Feature]
+4. 3-Layer MLP -> 2 Regression Outputs
+```
