@@ -1,0 +1,19 @@
+{
+  "inputs": [
+    {
+      "name": "input__0",
+      "shape": [2, 256, 101],
+      "datatype": "FP32",
+      "parameters": { "binary_data_size": 206848 }
+    },
+    {
+      "name": "input__1",
+      "shape": [2, 1000, 25],
+      "datatype": "FP32",
+      "parameters": { "binary_data_size": 200000 }
+    }
+  ],
+  "outputs": [
+    { "name": "output__0" }
+  ]
+}
