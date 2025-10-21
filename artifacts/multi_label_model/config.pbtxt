@@ -1,4 +1,4 @@
-name: "dta_model_output2"
+name: "multi_label_model"
 platform: "pytorch_libtorch"
 max_batch_size: 16
 

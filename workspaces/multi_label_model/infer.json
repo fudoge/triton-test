@@ -4,16 +4,16 @@
       "name": "input__0",
       "shape": [1, 256, 101],
       "datatype": "FP32",
+      "parameters": { "binary_data_size": 103424 }
     },
     {
       "name": "input__1",
-      "shape": [1, 1000, 25]
-      "datatype": "FP32"
+      "shape": [1, 1000, 25],
+      "datatype": "FP32",
+      "parameters": { "binary_data_size": 100000 }
     }
   ],
   "outputs": [
-    {
-      "name": "output__0"
-    }
+    { "name": "output__0" }
   ]
 }
